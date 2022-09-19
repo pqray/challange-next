@@ -15,19 +15,18 @@ class MainTabController: UITabBarController {
         uiTabBarSetting()
         
     }
-    
 
     func configureViewControllers(){
         let timeline = TimelineController(collectionViewLayout: UICollectionViewFlowLayout())
         timeline.tabBarItem.image = UIImage(named: "home_unselected")
         
-        let nav1 = templateNavigationController(image: UIImage(named: "home_unselected")!, rootViewController: timeline)
+        let nav1 = templateNavigationController(image: UIImage(named: "iconTimeline")!, rootViewController: timeline)
         
         let info = InfoController()
         info.tabBarItem.image = UIImage(named: "search_unselected")
-        let nav2 = templateNavigationController(image: UIImage(named: "search_unselected")!, rootViewController: info)
+        let nav2 = templateNavigationController(image: UIImage(named: "iconInfo")!, rootViewController: info)
         
-      viewControllers = [nav1, info]
+      viewControllers = [nav1, nav2]
    
     }
     

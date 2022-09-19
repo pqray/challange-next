@@ -31,8 +31,9 @@ class TimelineController: UICollectionViewController {
         view.backgroundColor = .white
         collectionView.register(cell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
+        let imageView = UIImageView(image: UIImage(named: "marvel"))
         imageView.contentMode = .scaleAspectFit
+        imageView.setDimensions(width: 50, height: 50)
         navigationItem.titleView = imageView
     }
 }
@@ -54,10 +55,6 @@ extension TimelineController: UICollectionViewDelegateFlowLayout{
         return CGSize (width: view.frame.width, height: 100)
     }
 }
-
-
-
-
 
 
 extension TimelineController: characterViewModelProtocol {

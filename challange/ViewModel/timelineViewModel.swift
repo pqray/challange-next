@@ -18,13 +18,13 @@ protocol characterViewModelProtocol: AnyObject {
 
 class CharacterViewModel {
     
-    //MARK: Variables
+
     var characterDataModel: CharacterDataModel?
     weak var delegate: characterViewModelProtocol?
     private var publicKey = Utils.getAPIKeys()[KeyString.publicKey.rawValue] ?? ""
     private var privateKey = Utils.getAPIKeys()[KeyString.privateKey.rawValue] ?? ""
     
-    //MARK: API Request to get Marvel Character List
+   
     func getCharacterList() {
         let timeStamp = String(Int(Date().timeIntervalSinceNow))
         let hash = Utils.md5Hash("\(timeStamp)\(privateKey)\(publicKey)")
